@@ -1,20 +1,44 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Zen_Old_Mincho } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const zenOldMincho = Zen_Old_Mincho({
+  variable: "--font-zen",
   subsets: ["latin"],
+  weight: "400",
+});
+
+const nightWatch = localFont({
+  src: "../../public/fonts/TheNightWatch.woff2",
+  variable: "--font-nightwatch",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Website Clone",
-  description: "Pixel-perfect website clone",
+  title: "KAISEI SADATOKI | Portfolio-V4",
+  description:
+    "Kaisei Sadatoki — Freelance developer and designer based in Japan, focused on clean, modern, and minimal design with attention to typography, layout, and animation.",
+  icons: {
+    icon: [
+      { url: "/seo/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/seo/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/seo/icon.ico", sizes: "any" },
+    ],
+    apple: { url: "/seo/apple-touch.png", sizes: "180x180" },
+  },
+  openGraph: {
+    title: "KAISEI SADATOKI | Portfolio-V4",
+    description:
+      "Kaisei Sadatoki — Freelance developer and designer based in Japan, focused on clean, modern, and minimal design with attention to typography, layout, and animation.",
+    images: [{ url: "/seo/ogp.jpg" }],
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +49,50 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${zenOldMincho.variable} ${nightWatch.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        {/* SVG filter definitions for ink animation */}
+        <svg
+          style={{
+            position: "absolute",
+            width: 0,
+            height: 0,
+            overflow: "hidden",
+          }}
+          aria-hidden="true"
+        >
+          <defs>
+            <filter
+              id="inkFilter"
+              x="-25%"
+              y="-50%"
+              width="150%"
+              height="200%"
+            >
+              <feTurbulence
+                type="fractalNoise"
+                baseFrequency="0.035"
+                numOctaves={4}
+                seed={5}
+                result="n"
+              />
+              <feDisplacementMap
+                id="inkDisp"
+                in="SourceGraphic"
+                in2="n"
+                scale={70}
+                xChannelSelector="R"
+                yChannelSelector="G"
+                result="d"
+              />
+              <feGaussianBlur id="inkBlur" in="d" stdDeviation={10} />
+            </filter>
+          </defs>
+        </svg>
+
+        {children}
+      </body>
     </html>
   );
 }
