@@ -18,9 +18,9 @@ export function PageHeader({
         <h1
           className="text-6xl ink-anim"
           style={{ marginBottom: 0 }}
-          dangerouslySetInnerHTML={{ __html: titleEn + "<br />&nbsp;" }}
+          dangerouslySetInnerHTML={{ __html: titleEn }}
         />
-        <p className="page-header__label text-lg ink-anim">{label}</p>
+        <p className="page-header__label text-lg ink-anim" style={{ marginTop: 24 }}>{label}</p>
         <div className="page-header__scroll">
           <span className="text-sm-site page-header__scroll-text">Scroll</span>
           <span className="text-sm-site page-header__scroll-text page-header__scroll-text--clone">

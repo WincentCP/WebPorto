@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,33 +7,41 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { GrainCanvas } from "@/components/GrainCanvas";
 
 export const metadata: Metadata = {
-  title: "SERVICE | KAISEI SADATOKI | Portfolio-V4",
+  title: "SERVICES | WINCENT COLEUS PHAN | Portfolio — V1",
 };
 
 const serviceItems = [
   {
     number: "[01]",
-    title: "DESIGN",
-    titleJa: "画面設計",
+    title: "Brand Identity",
+    titleJa: "品牌識別",
     image: "/images/service-design.jpg",
     description:
-      "I design websites that work seamlessly across all devices, from smartphones to desktops. Clean, modern, and minimal visuals are my specialty. I also take on simple graphic design work such as business cards.",
+      "I develop distinctive visual identities that help brands communicate with clarity, consistency, and purpose. From logo systems and typography to color palettes and brand guidelines, every element is designed to create a memorable and lasting impression.",
   },
   {
     number: "[02]",
-    title: "DEVELOPMENT",
-    titleJa: "機能実装",
+    title: "Social Media Design",
+    titleJa: "社群設計",
     image: "/images/service-development.jpg",
     description:
-      "I handle everything from static site development using HTML or Astro to full website builds with WordPress. I also take on implementation-only projects based on completed designs. All builds are responsive and implemented with care.",
+      "I create engaging social media visuals that strengthen a brand's presence across digital platforms. Every post, carousel, story, and campaign is designed to communicate effectively while remaining visually cohesive.",
   },
   {
     number: "[03]",
-    title: "MOTION",
-    titleJa: "体験設計",
+    title: "Marketing Design",
+    titleJa: "行銷設計",
     image: "/images/service-motion.jpg",
     description:
-      "I add smooth motion to websites through hover interactions and scroll animations. By bringing movement into the experience, I aim to create a sense of depth that goes beyond static visuals and leave a lasting impression that a design file alone cannot capture.",
+      "I design promotional materials for both digital and print media, including posters, banners, brochures, catalogs, menus, advertisements, and presentation decks that support business and marketing goals.",
+  },
+  {
+    number: "[04]",
+    title: "Event Visuals",
+    titleJa: "活動視覺",
+    image: "/images/service-event.png",
+    description:
+      "I craft visual assets for events, from promotional campaigns and stage graphics to certificates, merchandise, and supporting collateral, ensuring a unified visual experience across every touchpoint.",
   },
 ];
 
@@ -49,8 +56,8 @@ export default function ServicePage() {
       <main style={{ width: "100%" }}>
         <InkReveal>
           <PageHeader
-            titleJa="提供物"
-            titleEn="service"
+            titleJa="提供服務"
+            titleEn="Services"
             label="What I can do"
           />
         </InkReveal>
@@ -68,11 +75,9 @@ export default function ServicePage() {
                   </h2>
                   <div className="p-service-list__item-content">
                     <div className="p-service-list__item-img">
-                      <Image
+                      <img
                         src={item.image}
                         alt={item.title}
-                        width={455}
-                        height={366}
                         style={{
                           width: "100%",
                           height: "auto",

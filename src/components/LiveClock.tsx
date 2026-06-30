@@ -12,14 +12,14 @@ export function LiveClock() {
   useEffect(() => {
     const update = () => {
       const now = new Date();
-      // Japan time (JST = UTC+9)
-      const jstOptions: Intl.DateTimeFormatOptions = {
-        timeZone: "Asia/Tokyo",
+      // Western Indonesia Time (WIB = UTC+7)
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: "Asia/Jakarta",
         hour: "2-digit",
         minute: "2-digit",
         hour12: true,
       };
-      const formatted = new Intl.DateTimeFormat("en-US", jstOptions).format(now);
+      const formatted = new Intl.DateTimeFormat("en-US", options).format(now);
       // formatted is like "10:30 PM"
       const match = formatted.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/);
       if (match) {
@@ -34,7 +34,7 @@ export function LiveClock() {
 
   return (
     <span className="localtime">
-      <span className="text-base-site ink-anim">Iwate, Japan</span>
+      <span className="text-base-site ink-anim">Medan, Indonesia</span>
       &nbsp;
       <span className="text-base-site ink-anim">{time.hour}</span>
       <span className="text-base-site blink ink-anim">:</span>

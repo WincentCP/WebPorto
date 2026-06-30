@@ -8,13 +8,12 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { GrainCanvas } from "@/components/GrainCanvas";
 
 export const metadata: Metadata = {
-  title: "CONTACT | KAISEI SADATOKI | Portfolio-V4",
+  title: "CONTACT | WINCENT COLEUS PHAN | Portfolio — V1",
 };
 
 const socialLinks = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/s-kaisei/" },
-  { label: "Instagram", href: "https://www.instagram.com/kaiseee_i_j/" },
-  { label: "Awwwards", href: "https://www.awwwards.com/kaiseisadatoki/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/" },
+  { label: "Instagram", href: "https://www.instagram.com/" },
 ];
 
 export default function ContactPage() {
@@ -40,7 +39,7 @@ export default function ContactPage() {
               <div style={{ position: "relative" }}>
                 <Image
                   src="/images/contact.png"
-                  alt="Contact Kaisei Sadatoki"
+                  alt="Contact Wincent Coleus Phan"
                   width={600}
                   height={600}
                   style={{
@@ -66,9 +65,9 @@ export default function ContactPage() {
                   </p>
                   <a
                     className="text-base-site ink-anim"
-                    href="mailto:k25ts09@outlook.jp"
+                    href="mailto:wincentcoleusphan@gmail.com"
                   >
-                    k25ts09@outlook.jp
+                    wincentcoleusphan@gmail.com
                   </a>
                 </div>
                 <div className="p-contact__inquiry-social">

@@ -3,15 +3,14 @@ import Link from "next/link";
 const menuItems = [
   { label: "Top", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Service", href: "/service" },
-  { label: "Work", href: "/work" },
+  { label: "Services", href: "/service" },
+  { label: "Works", href: "/work" },
   { label: "Contact", href: "/contact" },
 ];
 
 const socialItems = [
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/s-kaisei/" },
-  { label: "Instagram", href: "https://www.instagram.com/kaiseee_i_j/" },
-  { label: "Awwwards", href: "https://www.awwwards.com/kaiseisadatoki/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/" },
+  { label: "Instagram", href: "https://www.instagram.com/" },
 ];
 
 export function Footer() {
@@ -55,8 +54,8 @@ export function Footer() {
             <div className="footer__mail">
               <p className="footer__head-label text-sm-site">[Mail]</p>
               <p>
-                <a className="text-base-site" href="mailto:k25ts09@outlook.jp">
-                  k25ts09@outlook.jp
+                <a className="text-base-site" href="mailto:wincentcoleusphan@gmail.com">
+                  wincentcoleusphan@gmail.com
                 </a>
               </p>
             </div>
@@ -64,8 +63,8 @@ export function Footer() {
           <div className="footer__credit">
             <p className="footer__head-label text-sm-site">[Credit]</p>
             <p className="text-base-site">
-              Design &amp; Development by{" "}
-              <span className="footer__credit-name">Kaisei</span>
+              Designed &amp; Developed by{" "}
+              <span className="footer__credit-name">Wincent Coleus Phan</span>
             </p>
           </div>
         </div>

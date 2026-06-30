@@ -7,8 +7,8 @@ import { GrainCanvas } from "@/components/GrainCanvas";
 
 const menuItems = [
   { number: "01", label: "About", href: "/about" },
-  { number: "02", label: "Service", href: "/service" },
-  { number: "03", label: "Work", href: "/work" },
+  { number: "02", label: "Services", href: "/service" },
+  { number: "03", label: "Works", href: "/work" },
   { number: "04", label: "Contact", href: "/contact" },
 ];
 
@@ -60,7 +60,7 @@ export default function Home() {
                     className="text-6xl ink-anim"
                     style={{ gridColumn: "1 / -1", gridRow: "1 / 2" }}
                   >
-                    KAISEI<br className="br-sp" />SADATOKI
+                    WINCENT<br className="br-sp" />COLEUS PHAN
                   </h1>
                   <p
                     className="text-lg ink-anim"
@@ -71,9 +71,9 @@ export default function Home() {
                       letterSpacing: "-0.02em",
                     }}
                   >
-                    WEB DESIGN &amp; DEVELOPMENT
+                    Graphic Designer
                     <br />
-                    Based in Japan
+                    Based in Medan, Indonesia
                   </p>
                   <div
                     className="text-base-site ink-anim"
@@ -84,10 +84,12 @@ export default function Home() {
                       maxWidth: 500,
                     }}
                   >
-                    Hello, I&apos;m currently working as a front-end developer
-                    and designer based in Japan. Rather than just building, I
-                    focus on creating clean and thoughtful work, paying attention
-                    to details such as typography, layout, and animation.
+                    Hello, I&apos;m Wincent Coleus Phan, a brand designer based in
+                    Medan, Indonesia. I help businesses build clear, memorable
+                    visual identities and create marketing designs that communicate
+                    with purpose. My work spans brand identity, social media,
+                    event visuals, and promotional design, with a focus on strong
+                    typography, thoughtful composition, and refined visual systems.
                   </div>
                 </div>
 
@@ -113,7 +115,7 @@ export default function Home() {
                   >
                     <span className="text-xs-site ink-anim">Version</span>
                     <span className="text-base-site ink-anim">
-                      Portfolio-V4
+                      Portfolio — V1
                     </span>
                   </div>
 
@@ -228,7 +230,7 @@ export default function Home() {
                 >
                   <a
                     className="text-base-site ink-anim"
-                    href="https://www.instagram.com/kaiseee_i_j/"
+                    href="https://www.instagram.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ writingMode: "vertical-lr" }}
@@ -237,7 +239,7 @@ export default function Home() {
                   </a>
                   <a
                     className="text-base-site ink-anim"
-                    href="https://www.linkedin.com/feed/"
+                    href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ writingMode: "vertical-lr" }}

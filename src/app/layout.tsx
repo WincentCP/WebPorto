@@ -22,9 +22,9 @@ const nightWatch = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "KAISEI SADATOKI | Portfolio-V4",
+  title: "WINCENT COLEUS PHAN | Portfolio — V1",
   description:
-    "Kaisei Sadatoki — Freelance developer and designer based in Japan, focused on clean, modern, and minimal design with attention to typography, layout, and animation.",
+    "Wincent Coleus Phan — Graphic designer based in Medan, Indonesia, focusing on brand identity, social media, event visuals, and promotional design.",
   icons: {
     icon: [
       { url: "/seo/favicon-16.png", sizes: "16x16", type: "image/png" },
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     apple: { url: "/seo/apple-touch.png", sizes: "180x180" },
   },
   openGraph: {
-    title: "KAISEI SADATOKI | Portfolio-V4",
+    title: "WINCENT COLEUS PHAN | Portfolio — V1",
     description:
-      "Kaisei Sadatoki — Freelance developer and designer based in Japan, focused on clean, modern, and minimal design with attention to typography, layout, and animation.",
+      "Wincent Coleus Phan — Graphic designer based in Medan, Indonesia, focusing on brand identity, social media, event visuals, and promotional design.",
     images: [{ url: "/seo/ogp.jpg" }],
   },
 };

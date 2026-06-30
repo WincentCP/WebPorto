@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,42 +7,41 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { GrainCanvas } from "@/components/GrainCanvas";
 
 export const metadata: Metadata = {
-  title: "WORK | KAISEI SADATOKI | Portfolio-V4",
+  title: "WORKS | WINCENT COLEUS PHAN | Portfolio — V1",
 };
 
 const workItems = [
   {
-    title: "NOOTSPACES",
+    title: "Brand Identity",
     description:
-      "I designed and developed a media website to document my thoughts and ideas. The design focuses on a modern aesthetic, with a slightly playful tone to reflect a media-style experience.",
-    year: "2026",
-    stack: "Astro",
-    role: "Design & Development",
-    linkHref: "https://nootspaces.vercel.app/",
-    linkLabel: "Launch Website",
+      "Developing distinctive visual identities through logos, typography, color systems, and brand applications.",
+    linkHref: "#branding",
+    linkLabel: "Explore Collection",
     image: "/images/nootspaces.jpg",
   },
   {
-    title: "Business Card",
+    title: "Social Media Design",
     description:
-      "I designed my own business card. As I worked on the design, I wanted to pay attention to the paper as well, so I actually visited a printing company and selected the type of paper myself.",
-    year: "2026",
-    stack: "―",
-    role: "Design",
-    linkHref: "https://www.instagram.com/p/DVf2TkiE-cX/?img_index=1",
-    linkLabel: "Detail on Instagram",
+      "Creating engaging social media content that helps brands communicate consistently across digital platforms.",
+    linkHref: "#social-media",
+    linkLabel: "Explore Collection",
     image: "/images/businesscard.jpg",
   },
   {
-    title: "Portfolio-V3",
+    title: "Marketing Design",
     description:
-      "This is version 3 of my portfolio site. I challenged myself with an international award for the first time. Rather than focusing on being user-first, I aim to create a design that lets people feel the thoughts I hold within myself.",
-    year: "2025",
-    stack: "Astro",
-    role: "Design & Development",
-    linkHref: "https://kaiseisadatoki-v3.vercel.app/",
-    linkLabel: "Launch Website",
+      "Designing promotional materials for both print and digital media, including posters, banners, brochures, catalogs, menus, and advertisements.",
+    linkHref: "#marketing",
+    linkLabel: "Explore Collection",
     image: "/images/portfolio-v3.jpg",
+  },
+  {
+    title: "Event Visuals",
+    description:
+      "Crafting cohesive visual assets for campaigns, university events, and brand activations across every touchpoint.",
+    linkHref: "#event-visuals",
+    linkLabel: "Explore Collection",
+    image: "/images/work-event.png",
   },
 ];
 
@@ -58,9 +56,9 @@ export default function WorkPage() {
       <main style={{ width: "100%" }}>
         <InkReveal>
           <PageHeader
-            titleJa="制作実績"
-            titleEn="work"
-            label="My projects so far"
+            titleJa="制作實績"
+            titleEn="Works"
+            label="A curated collection of design work across branding, digital, and print."
           />
         </InkReveal>
 
@@ -76,25 +74,26 @@ export default function WorkPage() {
                     <p className="p-work-list__info-desc text-base-site ink-anim">
                       {item.description}
                     </p>
-                    <div className="p-work-list__info-detail">
-                      <div className="p-work-list__info-year">
-                        <span className="text-xs-site ink-anim">Year</span>
-                        <p className="text-base-site ink-anim">{item.year}</p>
+                    {/* Only show details if any of year, stack, or role is provided */}
+                    {"year" in item && (
+                      <div className="p-work-list__info-detail">
+                        <div className="p-work-list__info-year">
+                          <span className="text-xs-site ink-anim">Year</span>
+                          <p className="text-base-site ink-anim">{(item as any).year}</p>
+                        </div>
+                        <div className="p-work-list__info-stack">
+                          <span className="text-xs-site ink-anim">Stack</span>
+                          <p className="text-base-site ink-anim">{(item as any).stack}</p>
+                        </div>
+                        <div className="p-work-list__info-role">
+                          <span className="text-xs-site ink-anim">Role</span>
+                          <p className="text-base-site ink-anim">{(item as any).role}</p>
+                        </div>
                       </div>
-                      <div className="p-work-list__info-stack">
-                        <span className="text-xs-site ink-anim">Stack</span>
-                        <p className="text-base-site ink-anim">{item.stack}</p>
-                      </div>
-                      <div className="p-work-list__info-role">
-                        <span className="text-xs-site ink-anim">Role</span>
-                        <p className="text-base-site ink-anim">{item.role}</p>
-                      </div>
-                    </div>
+                    )}
                     <a
                       className="p-work-list__link"
                       href={item.linkHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
                     >
                       <div className="p-work-list__link-circle">
                         <div className="p-work-list__link-dot"></div>
@@ -105,11 +104,9 @@ export default function WorkPage() {
                     </a>
                   </div>
                   <div className="p-work-list__img">
-                    <Image
+                    <img
                       src={item.image}
                       alt={item.title}
-                      width={576}
-                      height={420}
                       style={{
                         width: "100%",
                         height: "auto",

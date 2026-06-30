@@ -47,3 +47,22 @@ next-env.d.ts
 
 # Local temp files
 temp/
+
+# Exclude research & templates config
+docs/
+scripts/
+.aider.conf.yml
+.clinerules
+.windsurfrules
+Dockerfile*
+docker-compose.yml
+.opencode/
+.windsurf/
+.claude/
+.continue/
+.cursor/
+.augment/
+.codex/
+.amazonq/
+.gemini/
+

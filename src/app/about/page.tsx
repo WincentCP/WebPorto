@@ -8,45 +8,45 @@ import { CustomCursor } from "@/components/CustomCursor";
 import { GrainCanvas } from "@/components/GrainCanvas";
 
 export const metadata: Metadata = {
-  title: "ABOUT | KAISEI SADATOKI | Portfolio-V4",
+  title: "ABOUT | WINCENT COLEUS PHAN | Portfolio — V1",
 };
 
 const profileItems = [
   {
     label: "[Profile]",
     content:
-      "I just started learning out of curiosity and developed a passion for this field through continued study and project work. I'm currently working independently and also interested in international opportunities and working with overseas clients.",
+      "I'm a graphic designer from Medan, Indonesia, passionate about building brands that are both visually compelling and strategically effective. I create brand identities, social media campaigns, marketing materials, event visuals, and promotional assets that help businesses communicate with clarity and consistency. I'm always exploring new creative approaches, refining my craft, and collaborating with clients from different industries. I'm currently available for freelance projects, full-time opportunities, and international collaborations.",
   },
   {
-    label: "[Stack]",
-    content: "HTML, (S)CSS, JavaScript, WordPress, Astro, Figma",
+    label: "[Expertise]",
+    content: "Brand Identity, Visual Identity Systems, Social Media Design, Marketing Design, Event Visuals, Print Design, Adobe Creative Suite, Figma",
   },
   {
-    label: "[Award]",
+    label: "[Experience]",
     content:
-      "WD AWARDS FAVORITE × 1\nCSS WINNER STAR × 2\nCSS Design Award SPECIAL KUDOS × 1",
+      "Head of Graphic Designer — FAIV Agency\nHead of Perception and Reasoning Development - Student Executive Board UPH Medan Campus 24/25\nHead of Design & Publications - Ambassadors of UPH Medan Campus 24/25\nBrand Designer for Multiple Businesses",
   },
   {
     label: "[Language]",
-    content: "Japanese, English",
+    content: "Indonesian, English",
   },
 ];
 
 const approachItems = [
   {
-    title: "Communication",
+    title: "Clarity",
     description:
-      "I believe good work starts with open conversation. I make it a point to share any concerns, questions, or uncertainties rather than letting them go unspoken, and I value relationships where both sides can express themselves freely. My goal is for the people I work with to feel glad they did and to want to work together again. I believe that's what leads to better work.",
+      "I believe good design begins with a clear message. Every visual element should support the story a brand wants to tell, making communication simple, memorable, and purposeful.",
   },
   {
-    title: "Precision",
+    title: "Strategy",
     description:
-      "I pay close attention to every detail. This means reproducing designs faithfully down to the finest details, as well as researching anything I'm unsure about and suggesting better approaches when I see them. I believe that being able to dedicate time and care to each project is one of the strengths of working independently.",
+      "Design is more than aesthetics. I approach every project by understanding the audience, business goals, and brand personality before translating them into a cohesive visual system that delivers real value.",
   },
   {
-    title: "Exploration",
+    title: "Craftsmanship",
     description:
-      "I enjoy facing different designs and requirements with every project. I find myself drawn to the process of encountering things I don't know yet, and I think that's what makes this work exciting. Rather than going through the motions, I value approaching each project with fresh eyes and genuine curiosity.",
+      "I care deeply about typography, spacing, composition, and consistency. Small details create a stronger overall experience, and I enjoy refining every element until it feels balanced and intentional.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
         <InkReveal>
           <PageHeader
             titleJa="自己紹介"
-            titleEn="I&#39;m<br />front-end<br />developer<br />&amp; designer"
+            titleEn="I'm<br />brand<br />&amp; graphic<br />designer."
             label="About me"
           />
         </InkReveal>
@@ -92,7 +92,7 @@ export default function AboutPage() {
               >
                 <Image
                   src="/images/about-info.jpg"
-                  alt="Kaisei Sadatoki"
+                  alt="Wincent Coleus Phan"
                   width={600}
                   height={800}
                   style={{
@@ -128,7 +128,7 @@ export default function AboutPage() {
                     justifyContent: "flex-end",
                   }}
                 >
-                  23
+                  20
                 </span>
               </div>
 
@@ -211,17 +211,17 @@ export default function AboutPage() {
               />
             </div>
             <div className="l-wrapper" style={{ position: "relative" }}>
-              <div style={{ marginBottom: 96 }}>
-                <h2 className="text-6xl ink-anim">approach</h2>
+              <div style={{ marginBottom: 96, textAlign: "right" }}>
+                <h2 className="text-6xl ink-anim">philosophy</h2>
                 <p className="text-lg ink-anim">
-                  Things that I value while working on projects
+                  Design Philosophy
                 </p>
               </div>
-              <div className="about-approach-list">
+              <div className="about-approach-list" style={{ textAlign: "right" }}>
                 {approachItems.map((item) => (
                   <div
                     key={item.title}
-                    style={{ marginBottom: 48 }}
+                    style={{ marginBottom: 48, textAlign: "right" }}
                     className="about-approach-item"
                   >
                     <h3
